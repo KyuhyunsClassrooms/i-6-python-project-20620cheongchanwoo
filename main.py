@@ -111,10 +111,8 @@ def main():
             required_purifier = calculate_purifier_amount(current_value, standard_value, unit_amount)
             
             print(f"  ▶ [기준 초과 - 경고] {material_name}이 기준치({standard_value}ppm)를 초과했습니다!")
-            print(f"  ▶ [정화 지시] {purifier_name} 약품을 {required_purifier}g 투여해야 합니다.\n")
+            print(f"  ▶ [정화 지시] {purifier_name} 약품을 {required_purifier:.2f}g 투여해야 합니다.\n")
             
-            print(f"  ▶ [기준 초과 - 경고] {material_name}이 기준치({standard_value}ppm)를 초과했습니다!")
-            # print(f"  ▶ [정화 지시] {purifier_name} 약품을 {required_purifier}g 투여해야 합니다.\n")
             
         else:
             print(f"  ▶ [정상] {material_name} 상태 안전\n")
@@ -126,7 +124,8 @@ def main():
         print("정화 공정을 생략하고 폐수를 외부로 안전하게 방류합니다.")
         print("=" * 50)
 
-# ------------------------------------------------------------
+# -------------------------------
+# -----------------------------
 # 3. 프로그램 실행
 # ------------------------------------------------------------
 main()
